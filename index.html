@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty - Home</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="images/logo.png"
+            alt="Tasty"
+            class="logo-image"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'inline';
+            "
+          />
+          <span class="logo-text" style="display: none">Tasty</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li>
+            <a href="order.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <h1>Welcome to <span class="span_color">Tasty</span></h1>
+        <p id="hero-text" class="slide-text">
+          Delicious food delivered to your doorstep
+        </p>
+      </section>
+
+      <section class="search-section">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search for food or restaurant"
+        />
+        <div class="categories">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="pizza">Pizza</button>
+          <button class="category-btn" data-category="burger">Burger</button>
+          <button class="category-btn" data-category="biriyani">
+            Biriyani
+          </button>
+          <button class="category-btn" data-category="drinks">Drinks</button>
+          <button class="category-btn" data-category="dessert">Dessert</button>
+        </div>
+      </section>
+
+      <section id="menu" class="menu-section">
+        <h2>Featured <span class="span_color">Foods</span></h2>
+        <div id="food-items" class="food-grid">
+          <!-- Food items will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <!------------------------------------ review part start ----------------------------------------->
+      <section class="reviews-section">
+        <h2>customer<span class="span_color"> reviews</span></h2>
+        <div class="reviews-container">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">👤</div>
+                <div class="reviewer-details">
+                  <div class="reviewer-name">Sarah Johnson</div>
+                  <div class="review-date">2 weeks ago</div>
+                </div>
+              </div>
+              <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <div class="review-text">
+              "Amazing food and super fast delivery! The biryani was absolutely
+              delicious and arrived hot. Will definitely order again!"
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">👤</div>
+                <div class="reviewer-details">
+                  <div class="reviewer-name">Ahmed Rahman</div>
+                  <div class="review-date">1 month ago</div>
+                </div>
+              </div>
+              <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <div class="review-text">
+              "Best pizza in town! The crust was perfect and the toppings were
+              fresh. Great service and reasonable prices."
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">👤</div>
+                <div class="reviewer-details">
+                  <div class="reviewer-name">Priya Patel</div>
+                  <div class="review-date">3 weeks ago</div>
+                </div>
+              </div>
+              <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <div class="review-text">
+              "Love the variety of options! The chicken burger was juicy and
+              flavorful. Quick delivery and excellent packaging."
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">👤</div>
+                <div class="reviewer-details">
+                  <div class="reviewer-name">Michael Chen</div>
+                  <div class="review-date">1 week ago</div>
+                </div>
+              </div>
+              <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <div class="review-text">
+              "Desserts are heavenly! The tiramisu was rich and authentic.
+              Perfect end to a great meal. Highly recommended!"
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">👤</div>
+                <div class="reviewer-details">
+                  <div class="reviewer-name">Fatima Al-Zahra</div>
+                  <div class="review-date">2 days ago</div>
+                </div>
+              </div>
+              <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <div class="review-text">
+              "Excellent customer service! Had an issue with my order and they
+              resolved it immediately. Food was great too!"
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">👤</div>
+                <div class="reviewer-details">
+                  <div class="reviewer-name">Raj Kumar</div>
+                  <div class="review-date">5 days ago</div>
+                </div>
+              </div>
+              <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <div class="review-text">
+              "Authentic flavors! The vegetable biryani tasted just like home.
+              Fresh ingredients and perfect spice balance."
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------------------------------ review part end ----------------------------------------->
+
+      <!------------------------------------ download part start ----------------------------------------->
+      <section id="app">
+        <div class="app-container">
+          <div class="app-header">
+            <h3>our <span class="span_color">app</span></h3>
+          </div>
+          <div class="app-grid">
+            <figure class="snip1573">
+              <img src="images/preview.jpg" alt="DoorDash" />
+              <figcaption>
+                <h3>Download</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+
+            <div class="app-text">
+              <p>
+                Download our app and get <span class="span_color">25%</span> off
+                on any online order!!!
+              </p>
+              <img src="images/store-logo.png" alt="store-logo" />
+            </div>
+
+            <figure class="snip1573">
+              <img src="images/dribbble_shot_hd_-_12_4x.jpg" alt="DoorDash" />
+              <figcaption>
+                <h3>Download</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <!------------------------------------- download part end ---------------------------------------->
+
+      <!------------------------------------- achivement part start ---------------------------------------->
+      <section id="achievement">
+        <div class="achievement-container">
+          <div class="achievement-head">
+            <h3>our <span class="span_color">achievements</span></h3>
+          </div>
+
+          <div class="achievement-slider">
+            <div class="achievement-track">
+              <div class="achievement-item">
+                <img src="images/badge1.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/badge2.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/badge3.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/gf-logo-awards_logo.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/Golden-Bean-2019-logo.png" />
+              </div>
+              <div class="achievement-item">
+                <img
+                  src="images/golden-bean-sticker-gold-north-america-2022.png"
+                />
+              </div>
+              <div class="achievement-item">
+                <img src="images/sprudge-logo-transparent-bg.png" />
+              </div>
+
+              <div class="achievement-item">
+                <img src="images/badge1.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/badge2.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/badge3.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/gf-logo-awards_logo.png" />
+              </div>
+              <div class="achievement-item">
+                <img src="images/Golden-Bean-2019-logo.png" />
+              </div>
+              <div class="achievement-item">
+                <img
+                  src="images/golden-bean-sticker-gold-north-america-2022.png"
+                />
+              </div>
+              <div class="achievement-item">
+                <img src="images/sprudge-logo-transparent-bg.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------------------------------- achivement part end ---------------------------------------->
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          &copy; 2026 <span class="span_color">Tasty</span>. All rights
+          reserved.
+        </p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- 
+Made by:
+Name: Yasir Arafat
+ID: 2024100010157
+-->

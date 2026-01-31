@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty - Order Details</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="images/logo.png"
+            alt="Tasty"
+            class="logo-image"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'inline';
+            "
+          />
+          <span class="logo-text" style="display: none">Tasty</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#menu">Menu</a></li>
+          <li>Cart (<span id="cart-count">0</span>)</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="order-details">
+        <h1>Order Details</h1>
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div id="order-items" class="order-items">
+            <!-- Order items will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <div class="pricing-breakdown">
+          <h2>Pricing Breakdown</h2>
+          <div class="pricing-item">
+            <span>Subtotal:</span>
+            <span id="subtotal">৳0</span>
+          </div>
+          <div class="pricing-item">
+            <span>Delivery Fee:</span>
+            <span id="delivery-fee">৳150</span>
+          </div>
+          <div class="pricing-item">
+            <span>Tax:</span>
+            <span id="tax">৳0</span>
+          </div>
+          <div class="pricing-item total">
+            <span>Total:</span>
+            <span id="total">৳0</span>
+          </div>
+        </div>
+
+        <div class="order-actions">
+          <button id="place-order-btn" class="btn primary">Place Order</button>
+          <button
+            id="continue-shopping-btn"
+            class="btn secondary"
+            onclick="window.location.href = 'index.html'"
+          >
+            Continue Shopping
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          &copy; 2026 <span class="span_color">Tasty</span>. All rights
+          reserved.
+        </p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
